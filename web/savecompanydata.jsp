@@ -20,7 +20,7 @@
           
           String stat="c";
           st2.executeUpdate("insert into ROOT.LOGIN values('"+request.getParameter("comusername")+"','"+request.getParameter("compassword")+"','"+stat+"')");
-          st.executeUpdate("insert into ROOT.COM(CName,CAddress,CPost,CCriteria,CUsername,CEmail,CContact,CCutoff) values('"+request.getParameter("comname")+"','"+request.getParameter("comaddress")+"','"+request.getParameter("compost")+"','"+request.getParameter("comcriteria")+"','"+request.getParameter("comusername")+"','"+request.getParameter("comemail")+"','"+request.getParameter("comcontact")+"','"+request.getParameter("comcutoff")+"')");
+          st.executeUpdate("insert into ROOT.COM(CName,CAddress,CPost,CCriteria,CUsername,CEmail,CContact,CCutoff) values('"+request.getParameter("comname")+"','"+request.getParameter("comaddress")+"','"+request.getParameter("compost")+"','"+request.getParameter("comcriteria")+"','"+request.getParameter("comusername")+"','"+request.getParameter("comemail")+"','"+Integer.parseInt(request.getParameter("comcontact"))+"','"+Integer.parseInt(request.getParameter("comcutoff"))+"')");
           st.close();
           st2.close();
           

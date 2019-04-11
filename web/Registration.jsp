@@ -115,12 +115,12 @@
 
                     return false;
                 }
-                else if(((document.form1.collegephone.value.length)<6) || ((document.form1.collegephone.value.length)>11))
-                {
-                    alert("Phone no: should contain atleast 6 integers ");
-                    document.form1.collegephone.focus();
-                    return false;
-                }
+             //   else if(((document.form1.collegephone.value.length)<6) || ((document.form1.collegephone.value.length)>11))
+              //  {
+               //     alert("Phone no: should contain atleast 6 integers ");
+               //     document.form1.collegephone.focus();
+               //     return false;
+              //  }
                 if(document.form1.collegeemail.value=="")
                 {
                     alert("Enter College email ");
@@ -255,13 +255,13 @@
                     alert("Enter Ph Integer");
                     return false;
                 }
-                else if(((document.form1.telephone.value.length)<6) || ((document.form1.telephone.value.length)>11))
-                {
-                    alert("Phone no should contain atleast 6 integers ");
+            //    else if(((document.form1.telephone.value.length)<6) || ((document.form1.telephone.value.length)>11))
+             //   {
+             //       alert("Phone no should contain atleast 6 integers ");
 
-                    document.form1.telephone.focus();
-                    return false;
-                }
+         //           document.form1.telephone.focus();
+            //        return false;
+            //    }
                 if(document.form1.address.value=="")
                 {
                     alert("Enter Address");
