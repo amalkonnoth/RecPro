@@ -31,8 +31,8 @@
           
          // String stat="c";
          // st2.executeUpdate("insert into Login values('"+request.getParameter("comusername")+"','"+request.getParameter("compassword")+"','"+stat+"')");
-          st.executeUpdate("insert into JobDetails values('"+request.getParameter("jobid")+"','"+request.getParameter("post")+"','"+request.getParameter("criteria")+"','"+request.getParameter("vacancies")+"','"+request.getParameter("salary")+"','"+request.getParameter("lastdate")+"')");
-          st2.executeUpdate("insert into Exam values('"+request.getParameter("jobid")+"','"+request.getParameter("post")+"')");
+          st.executeUpdate("insert into ROOT.JOBDETAILS values('"+request.getParameter("jobid")+"','"+request.getParameter("post")+"','"+request.getParameter("criteria")+"','"+request.getParameter("vacancies")+"','"+request.getParameter("salary")+"','"+request.getParameter("lastdate")+"')");
+          st2.executeUpdate("insert into ROOT.EXAM values('"+request.getParameter("jobid")+"','"+request.getParameter("post")+"')");
           
            st.close();
            st2.close();
@@ -42,6 +42,7 @@
         
            catch(Exception e)
                    {
+                       System.out.println(e);
                    }
         
            %>
