@@ -1,9 +1,4 @@
-<%-- 
-    Document   : savecompanydata
-    Created on : Nov 14, 2008, 10:39:55 AM
-    Author     : user
---%>
-<%@page import="java.io.*,java.sql.*;"%>
+<%@page import="java.io.*,java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -24,8 +19,8 @@
           Statement st2=con.createStatement();
           
           String stat="c";
-          st2.executeUpdate("insert into Login values('"+request.getParameter("comusername")+"','"+request.getParameter("compassword")+"','"+stat+"')");
-          st.executeUpdate("insert into Com(CName,CAddress,CPost,CCriteria,CUsername,CEmail,CContact,CCutoff) values('"+request.getParameter("comname")+"','"+request.getParameter("comaddress")+"','"+request.getParameter("compost")+"','"+request.getParameter("comcriteria")+"','"+request.getParameter("comusername")+"','"+request.getParameter("comemail")+"','"+request.getParameter("comcontact")+"','"+request.getParameter("comcutoff")+"')");
+          st2.executeUpdate("insert into ROOT.LOGIN values('"+request.getParameter("comusername")+"','"+request.getParameter("compassword")+"','"+stat+"')");
+          st.executeUpdate("insert into ROOT.COM(CName,CAddress,CPost,CCriteria,CUsername,CEmail,CContact,CCutoff) values('"+request.getParameter("comname")+"','"+request.getParameter("comaddress")+"','"+request.getParameter("compost")+"','"+request.getParameter("comcriteria")+"','"+request.getParameter("comusername")+"','"+request.getParameter("comemail")+"','"+request.getParameter("comcontact")+"','"+request.getParameter("comcutoff")+"')");
           st.close();
           st2.close();
           

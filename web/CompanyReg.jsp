@@ -1,8 +1,3 @@
-<%-- 
-    Document   : CompanyReg
-    Created on : Nov 11, 2008, 4:14:09 PM
-    Author     : user
---%>
 <%@page import="java.io.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"

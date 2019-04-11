@@ -1,9 +1,4 @@
-<%-- 
-    Document   : ExamView
-    Created on : Nov 18, 2008, 2:27:28 PM
-    Author     : Srishti
---%>
-<%@page import="java.io.*,java.sql.*;"%>
+<%@page import="java.io.*,java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"  %>
 <%
 

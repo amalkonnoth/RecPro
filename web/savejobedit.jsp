@@ -1,9 +1,3 @@
-<%-- 
-    Document   : savejoedit
-    Created on : Dec 31, 2008, 11:01:14 AM
-    Author     : Srishti
---%>
-
 <%@page  import="java.sql.*" %>
 <%@page import="java.io.*,java.sql.*,java.util.*,java.util.Vector;"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

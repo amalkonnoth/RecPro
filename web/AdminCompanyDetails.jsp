@@ -1,9 +1,4 @@
-<%-- 
-    Document   : AdminCompanyDetails
-    Created on : Nov 15, 2008, 12:50:40 PM
-    Author     : user
---%>
-<%@page import="java.io.*,java.sql.*;"%>
+<%@page import="java.io.*,java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -13,10 +8,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>www.RecPro.com</title>
         <style type="text/css">
-<!--
+
 .style1 {color: #3300CC}
 .style4 {color: #003300}
--->
+
         </style>
 </head>
     <body>
@@ -60,6 +55,8 @@
             phone=rs.getString("CContact");
             email=rs.getString("CEmail");
             cutoff=rs.getString("CCutoff");
+           
+              
       %>
       <tr>
         <td height="22" bordercolor="#CC9999" ><div align="center"><span class="style6">

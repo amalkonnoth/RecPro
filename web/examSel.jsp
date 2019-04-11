@@ -1,5 +1,4 @@
-
-<%@page import="java.io.*,java.sql.*;"session="true"%>
+<%@page import="java.io.*,java.sql.*"session="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 

@@ -1,9 +1,4 @@
-<%-- 
-    Document   : savecompanyedit
-    Created on : Nov 18, 2008, 5:01:35 PM
-    Author     : Srishti
---%>
-<%@page import="java.io.*,java.sql.*;"%>
+<%@page import="java.io.*,java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -28,7 +23,7 @@
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/general","root","toor");
             Statement st = con.createStatement();
-            String sql = "Update Com set CName ='" + request.getParameter("comname") + "',CAddress ='" +
+            String sql = "Update ROOT. set CName ='" + request.getParameter("comname") + "',CAddress ='" +
                     request.getParameter("comaddress") + "',CPost ='" + request.getParameter("compost") +
                     "',CCriteria ='" + request.getParameter("comcriteria") + "',CEmail ='" + request.getParameter("comemail") +
                     "',CContact ='" + request.getParameter("comcontact") + "',CCutoff ='" + request.getParameter("comcutoff") +

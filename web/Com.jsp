@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Com
-    Created on : Nov 22, 2008, 12:02:58 PM
-    Author     : Srishti
---%>
 <%@page import="java.io.*,java.sql.*,java.util.*,java.util.Vector;" session="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"

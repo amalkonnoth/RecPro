@@ -1,11 +1,4 @@
-<%-- 
-    Document   : savestudentdata
-    Created on : Nov 22, 2008, 11:20:05 AM
-    Author     : Srishti
---%>
-
-
-<%@page import="java.io.*,java.sql.*;" %>
+<%@page import="java.io.*,java.sql.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -27,10 +20,10 @@
            Statement st3=con.createStatement();
            String status="s";
            st2.executeUpdate("insert into ROOT.LOGIN values('"+request.getParameter("username")+"','"+request.getParameter("password")+"','"+status+"')");
-           st.executeUpdate("insert into ROOT.DETAILS values('"+request.getParameter("username")+"','"+request.getParameter("name")+"','"+request.getParameter("gender")+"','"+request.getParameter("dob")+"','"+request.getParameter("college")+"','"+request.getParameter("collegephone")+"','"+request.getParameter("collegeemail")+"','"+request.getParameter("branch")+"','"+request.getParameter("markDegree")+"','"+request.getParameter("degree")+"','"+request.getParameter("email")+"','"+request.getParameter("telephone")+"','"+request.getParameter("address")+"','"+request.getParameter("state")+"','"+request.getParameter("pin")+"','"+request.getParameter("sel_cat")+"')");
+           st.executeUpdate("insert into ROOT.DETAILS values('"+request.getParameter("username")+"','"+request.getParameter("name")+"','"+request.getParameter("gender")+"','"+request.getParameter("dob")+"','"+request.getParameter("college")+"','"+Integer.parseInt(request.getParameter("collegephone"))+"','"+request.getParameter("collegeemail")+"','"+request.getParameter("branch")+"','"+Integer.parseInt(request.getParameter("markDegree"))+"','"+request.getParameter("degree")+"','"+request.getParameter("email")+"','"+Integer.parseInt(request.getParameter("telephone"))+"','"+request.getParameter("address")+"','"+request.getParameter("state")+"','"+Integer.parseInt(request.getParameter("pin"))+"','"+request.getParameter("sel_cat")+"')");
 		   if(request.getParameter("sel_cat").equals("Experienced"))
 		   {
-           st3.executeUpdate("insert into ROOT.EXPERIENCED values('"+request.getParameter("username")+"','"+request.getParameter("expyears")+"','"+request.getParameter("company")+"','"+request.getParameter("designation")+"','"+request.getParameter("salary")+"','"+request.getParameter("comAddress")+"')");
+           st3.executeUpdate("insert into ROOT.EXPERIENCED values('"+request.getParameter("username")+"','"+Integer.parseInt(request.getParameter("expyears"))+"','"+request.getParameter("company")+"','"+request.getParameter("designation")+"','"+Integer.parseInt(request.getParameter("salary"))+"','"+request.getParameter("comAddress")+"')");
 		   }
            st.close();
            st2.close();

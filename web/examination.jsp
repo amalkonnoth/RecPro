@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html" import="java.sql.*;" session="true"%>
+<%@ page language="java" contentType="text/html" import="java.sql.*" session="true"%>
 <html >
  
 <head>

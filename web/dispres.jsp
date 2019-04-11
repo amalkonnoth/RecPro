@@ -1,8 +1,3 @@
-<%--
-    Document   : JobseekerHomePage
-    Created on : Nov 11, 2008, 12:45:18 PM
-    Author     : user
---%>
 <%@page import="java.io.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" session="true" import="java.sql.*"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"

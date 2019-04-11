@@ -1,9 +1,4 @@
-<%-- 
-    Document   : saveComPassword
-    Created on : Nov 19, 2008, 12:52:52 PM
-    Author     : Srishti
---%>
-<%@page import="java.io.*,java.sql.*;"%>
+<%@page import="java.io.*,java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -26,7 +21,7 @@
 
             Statement st = con.createStatement();
             Statement st2 = con.createStatement();
-            String sql1 = "Update Login set Password='" + newpass + "'where Username='" + c2 + "'and Password='" + c1 + "'";
+            String sql1 = "Update ROOT.LOGIN set Password='" + newpass + "'where Username='" + c2 + "'and Password='" + c1 + "'";
             //String sql2 = "Update Com set CPassword='" + newpass + "'where CUsername='" + c2 + "'and CPassword='" + c1 + "'";
             //out.println(sql1);
             st.executeUpdate(sql1);

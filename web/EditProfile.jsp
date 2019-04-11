@@ -1,8 +1,3 @@
-<%-- 
-    Document   : EditProfile
-    Created on : Nov 14, 2008, 11:33:33 AM
-    Author     : user
---%>
 <%@page import="java.io.*" session="true"%>
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

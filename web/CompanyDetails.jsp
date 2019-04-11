@@ -1,9 +1,4 @@
-<%-- 
-    Document   : CompanyDetails
-    Created on : Nov 14, 2008, 12:57:30 PM
-    Author     : user
---%>
-<%@page import="java.io.*,java.sql.*;"%>
+<%@page import="java.io.*,java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">

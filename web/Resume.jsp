@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Resume
-    Created on : Nov 15, 2008, 11:22:10 AM
-    Author     : user
---%>
 <%@page import="java.io.*,java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"

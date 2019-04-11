@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" language="java"  import="java.sql.*" errorPage="" %>
-<%@page import="java.io.*,java.sql.*;" session="true" %>
+<%@page import="java.io.*,java.sql.*" session="true" %>
 
 
 
