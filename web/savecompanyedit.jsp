@@ -23,7 +23,7 @@
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/general","root","toor");
             Statement st = con.createStatement();
-            String sql = "Update ROOT. set CName ='" + request.getParameter("comname") + "',CAddress ='" +
+            String sql = "Update ROOT.COM set CName ='" + request.getParameter("comname") + "',CAddress ='" +
                     request.getParameter("comaddress") + "',CPost ='" + request.getParameter("compost") +
                     "',CCriteria ='" + request.getParameter("comcriteria") + "',CEmail ='" + request.getParameter("comemail") +
                     "',CContact ='" + request.getParameter("comcontact") + "',CCutoff ='" + request.getParameter("comcutoff") +

@@ -37,7 +37,7 @@
                 Class.forName("org.apache.derby.jdbc.ClientDriver");
                 Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/general","root","toor");
                 Statement st = con.createStatement();  
-                ResultSet rs = st.executeQuery("select * from JobDetails where JobId='" + jid + "'");
+                ResultSet rs = st.executeQuery("select * from ROOT.JOBDETAILS where JobId='" + jid + "'");
                 while (rs.next())
                     {  
                     jid=rs.getString("JobId");

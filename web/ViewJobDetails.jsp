@@ -48,13 +48,13 @@
       try
               {
       Statement st=con.createStatement();
-      ResultSet rs=st.executeQuery("select * from JobDetails");
-            String  jid="",jpost="",jcriteria="",jvac="",jsal="",jdate="";
+      ResultSet rs=st.executeQuery("select * from ROOT.JOBDETAILS");
+            String  jpost="",jcriteria="",jid="",jvac="",jsal="",jdate="";
         while(rs.next())
             {
-			jid=rs.getString("JobId");
                         jpost=rs.getString("Post");
                         jcriteria=rs.getString("Criteria");
+                        jid=rs.getString("JobId");
                         jvac=rs.getString("NoOfVacancies");
                         jsal=rs.getString("Salary");
                         jdate=rs.getString("LastDate");

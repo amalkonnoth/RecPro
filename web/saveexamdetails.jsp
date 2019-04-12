@@ -1,4 +1,4 @@
-<%@page import="java.io.*,java.sql.*"session="true"%>
+<%@page import="java.io.*,java.sql.*" session="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -18,7 +18,7 @@
            Class.forName("org.apache.derby.jdbc.ClientDriver");
            Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/general","root","toor");
            Statement st=con.createStatement();
-           st.executeUpdate("insert into Exam values('"+a+"','"+b+"','"+request.getParameter("examid")+"','"+request.getParameter("examname")+"','"+request.getParameter("cutoff")+"')");
+           st.executeUpdate("insert into ROOT.EXAM values('"+b+"','"+request.getParameter("examname")+"','"+request.getParameter("examid")+"','"+request.getParameter("cutoff")+"','"+a+"')");
     //  out.println("insert into Exam values('"+a+"','"+b+"','"+request.getParameter("examid")+"','"+request.getParameter("examname")+"','"+request.getParameter("cutoff")+"')");
    //   out.println("test");
       //     st.close();

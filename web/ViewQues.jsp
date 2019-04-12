@@ -41,8 +41,10 @@
                             </tr>
                             <tr>
                                 <%
-        String jid = request.getParameter("jobid");
+       String jid = request.getParameter("jobid");
         String eid = request.getParameter("examid");
+   
+      
         //out.print(jid);
         try {
             if (eid == null) {
@@ -55,7 +57,7 @@
                                     <td width="129" height="32"><span class="style15">Select an JobID </span></td>
                                     <td width="118"><label>
                                             <select name="jobid">
-                                                <%      ResultSet rs2 = st2.executeQuery("select * from JobDetails");
+                                                <%      ResultSet rs2 = st2.executeQuery("select * from ROOT.JOBDETAILS  ");
                                         String s2 = null;
                                         // String s2=null;
                                         while (rs2.next()) {
@@ -72,7 +74,7 @@
                                 <td width="129" height="32"><span class="style15">Select an ExamID </span></td>
                                 <td width="118"><label>
                                         <select name="examid">
-                                            <%      ResultSet rs = st.executeQuery("select * from Exam ");
+                                            <%      ResultSet rs = st.executeQuery("select * from ROOT.EXAM ");
                                         String s1 = null;
                                         // String s2=null;
                                         while (rs.next()) {
@@ -99,27 +101,28 @@
                                     } else {
                         %>
                     </p>
-                    <table width="99%" height="54" border="1" align="left">
+                    <table width="99%"  border="1" align="left">
 
                         <tr>
-                            <td width="149" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center"><span class="style10">Question No: </span></div></td>
-                            <td width="149" height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Question</span></div></td>
-                            <td width="74" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 1</span></div></td>
-                            <td width="85" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 2</span></div></td>
-                            <td width="75" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 3</span></div></td>
-                            <td width="78" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 4</span></div></td>
-                            <td width="80" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Answer</span></div></td>
-                            <td width="77" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Delete</span></div></td>
+                            <td width="149"  bgcolor="#F1F0E2"><div align="center"><span class="style10">Question No: </span></div></td>
+                            <td width="149" height="23" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Question</span></div></td>
+                            <td width="74" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 1</span></div></td>
+                            <td width="85"  bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 2</span></div></td>
+                            <td width="75"  bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 3</span></div></td>
+                            <td width="78" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Option 4</span></div></td>
+                            <td width="80" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Answer</span></div></td>
+                            <td width="77" bgcolor="#F1F0E2"><div align="center" class="style10"><span class="style11">Delete</span></div></td>
                         </tr>
                         <%
-
+        int J_id = Integer.parseInt(jid);
+        int E_id = Integer.parseInt(eid);
                                         Class.forName("org.apache.derby.jdbc.ClientDriver");
                                         Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/general","root","toor");
                                         Statement st3 = con.createStatement();
                                         // Statement st2=con.createStatement();
 
-                                        ResultSet rs3 = st3.executeQuery("select QuestionNo,Question,Option1,Option2,Option3,Option4,Answer from Question where ExamID='" +
-                                                eid + "' and JobID='" + jid + "'");
+                                        ResultSet rs3 = st3.executeQuery("select QuestionNo,Question,Option1,Option2,Option3,Option4,Answer from ROOT.QUESTION where ExamID=" +
+                                                E_id + " and JobID=" + J_id + "");
                                         //  String s2=null;
                                         while (rs3.next()) {
                                             String qno = rs3.getString("QuestionNo");
@@ -130,30 +133,32 @@
                                             String op4 = rs3.getString("Option4");
                                             String ans = rs3.getString("Answer");
 
-
+    
 
                         %>
+                        
+   
                         <tr>
-                            <td bordercolor="#666699" bgcolor="#F1F0E2"><%=qno%></td>
-                            <td height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center">
+                            <td  bgcolor="#F1F0E2"><%=qno%></td>
+                            <td height="23" bgcolor="#F1F0E2"><div align="center">
                                     <%=ques%>
                             </div></td>
-                            <td height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center">
+                            <td height="23"  bgcolor="#F1F0E2"><div align="center">
                                     <%=op1%>
                             </div></td>
-                            <td height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center">
+                            <td height="23" bgcolor="#F1F0E2"><div align="center">
                                     <%=op2%>
                             </div></td>
-                            <td height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center">
+                            <td height="23" bgcolor="#F1F0E2"><div align="center">
                                     <%=op3%>
                             </div></td>
-                            <td height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center">
+                            <td height="23" bgcolor="#F1F0E2"><div align="center">
                                     <%=op4%>
                             </div></td>
-                            <td height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center">
+                            <td height="23"  bgcolor="#F1F0E2"><div align="center">
                                     <%=ans%>
                             </div></td>
-                            <td height="23" bordercolor="#666699" bgcolor="#F1F0E2"><div align="center"><a href="DeleteQues.jsp?qno=<%=qno%>&jid=<%=jid%>&eid=<%=eid%>" >Delete</a></div></td>
+                            <td height="23" bgcolor="#F1F0E2"><div align="center"><a href="DeleteQues.jsp?qno=<%=qno%>&jid=<%=jid%>&eid=<%=eid%>" >Delete</a></div></td>
                         </tr>
 
                         <%
