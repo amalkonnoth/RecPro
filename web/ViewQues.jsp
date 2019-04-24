@@ -121,8 +121,7 @@
                                         Statement st3 = con.createStatement();
                                         // Statement st2=con.createStatement();
 
-                                        ResultSet rs3 = st3.executeQuery("select QuestionNo,Question,Option1,Option2,Option3,Option4,Answer from ROOT.QUESTION where ExamID=" +
-                                                E_id + " and JobID=" + J_id + "");
+                                        ResultSet rs3 = st3.executeQuery("select QuestionNo,Question,Option1,Option2,Option3,Option4,Answer from ROOT.QUESTION where ExamID='" +eid + "' and JobID='" + jid + "'");
                                         //  String s2=null;
                                         while (rs3.next()) {
                                             String qno = rs3.getString("QuestionNo");
